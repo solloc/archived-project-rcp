@@ -9,6 +9,7 @@ import javax.inject.Inject;
 
 import org.eclipse.swt.widgets.Composite;
 
+import com.novaimpact.project.service.ISecondTaskService;
 import com.novaimpact.project.service.ITaskService;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
@@ -20,11 +21,16 @@ public class TaskListPart {
 	
 //	@Inject
 //	private ITaskService taskService;
+	
+	@Inject
+	private ISecondTaskService secondTaskService;
 
 	@PostConstruct
 	public void postConstruct(Composite parent) {
 		
-		this.tableData = Arrays.asList("abc","def","ghi","qwert","asdfg","yxcvb");
+		this.tableData = this.secondTaskService.getTasks();
+		
+//		this.tableData = Arrays.asList("abc","def","ghi","qwert","asdfg","yxcvb");
 //		this.tableData = this.taskService.getTasks();
 		
 		
