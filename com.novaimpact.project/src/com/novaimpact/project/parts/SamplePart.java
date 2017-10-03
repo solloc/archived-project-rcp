@@ -55,9 +55,10 @@ public class SamplePart {
 	@Persist
 	public void save() {
 		dirty.setDirty(false);
+		System.out.println("test-1-2-3");
 	}
 	
 	private List<String> createInitialDataModel() {
-		return Arrays.asList("Sample item 1", "Sample item 2", "Sample item 3", "Sample item 4", "Sample item 5");
+		return Arrays.asList("Sample item 1", "Sample item 2", "Sample item 3", "Sample item 4", "Sample item 5", "Part 6");
 	}
 }

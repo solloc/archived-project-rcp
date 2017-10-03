@@ -22,6 +22,6 @@ public class IncidentPart {
 
 	@Persist
 	public void save() {
-		
+		System.console().writer().println("test-1");
 	}
 }
