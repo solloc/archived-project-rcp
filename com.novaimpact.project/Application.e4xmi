@@ -19,8 +19,7 @@
           <children xsi:type="menu:HandledMenuItem" xmi:id="_mV8T8KhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.handledmenuitem.view-add" label="view add"/>
         </menus>
         <toolbar xmi:id="_lyxgAKhPEeeRrI4sOl8pGw" elementId="com.novaimpact.project.toolbar.task-tools">
-          <children xsi:type="menu:DirectToolItem" xmi:id="_xVANEKhPEeeRrI4sOl8pGw" elementId="com.novaimpact.project.directtoolitem.direct" label="direct" iconURI="platform:/plugin/com.novaimpact.project/icons/sample.png" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.NewTaskHandler"/>
-          <children xsi:type="menu:HandledToolItem" xmi:id="_bzXbIKhQEeeRrI4sOl8pGw" elementId="com.novaimpact.project.handledtoolitem.handled" label="handled" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+          <children xsi:type="menu:HandledToolItem" xmi:id="_YVUR0Kq_EeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.newTask" label="new task" command="_EzFoUKq_EeejosGbL4munw"/>
         </toolbar>
       </children>
     </children>
@@ -45,6 +44,7 @@
   <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.openCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.saveCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.aboutCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_LYgdIKq_EeejosGbL4munw" elementId="com.novaimpact.project.handler.newTask" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.NewTaskHandler" command="_EzFoUKq_EeejosGbL4munw"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -55,11 +55,12 @@
     <children xmi:id="_6wlLesgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_6wlLe8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
-  <descriptors xmi:id="_VTvXMKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.partdescriptor.task"/>
+  <descriptors xmi:id="_VTvXMKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.partdescriptor.task" label="Task" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskPart"/>
   <commands xmi:id="_6wlLfMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
   <commands xmi:id="_6wlLgMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.open" commandName="openCommand"/>
   <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_EzFoUKq_EeejosGbL4munw" elementId="com.novaimpact.project.command.newTask" commandName="newTaskCommand"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
