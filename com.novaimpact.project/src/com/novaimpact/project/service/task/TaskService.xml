@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.novaimpact.project.service.task.TaskService">
+   <implementation class="com.novaimpact.project.service.task.TaskService"/>
+   <service>
+      <provide interface="com.novaimpact.project.service.task.ITaskService"/>
+   </service>
+</scr:component>

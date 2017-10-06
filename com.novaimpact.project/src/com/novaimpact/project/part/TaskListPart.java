@@ -6,24 +6,24 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-import org.eclipse.swt.widgets.Composite;
-
-import com.novaimpact.project.service.ISecondTaskService;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.widgets.Composite;
+
+import com.novaimpact.project.service.task.ITaskService;
 
 public class TaskListPart {
 	private List<String> tableData;
-	
+
 	@Inject
-	private ISecondTaskService secondTaskService;
+	private ITaskService taskService;
 
 	@PostConstruct
 	public void postConstruct(Composite parent) {
 		
-		this.tableData = this.secondTaskService.getTasks();		
+		this.tableData = this.taskService.getTasks();		
 		
 		parent.setLayout(new FillLayout(SWT.HORIZONTAL));
 		
