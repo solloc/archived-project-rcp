@@ -3,12 +3,12 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.window.main" label="project">
     <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.partsashcontainer.sample" visible="false">
       <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.partstack.sample">
-        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.part.sample" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.parts.SamplePart" label="Sample Part"/>
-        <children xsi:type="basic:Part" xmi:id="_j-h2MKOkEee5C7KxQo_CQA" elementId="com.novaimpact.project.part.incident" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.parts.IncidentPart" label="Incident"/>
+        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.part.sample" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.SamplePart" label="Sample Part"/>
+        <children xsi:type="basic:Part" xmi:id="_j-h2MKOkEee5C7KxQo_CQA" elementId="com.novaimpact.project.part.incident" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.IncidentPart" label="Incident"/>
       </children>
     </children>
     <children xsi:type="basic:PartStack" xmi:id="_JZCfwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.partstack.main">
-      <children xsi:type="basic:Part" xmi:id="_MBfvwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.part.task-list" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.parts.TaskListPart" label="Tasks">
+      <children xsi:type="basic:Part" xmi:id="_MBfvwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.part.task-list" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskListPart" label="Tasks">
         <menus xmi:id="_cBx8gKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.menu.menu-1" visible="false" label="menu-1">
           <children xsi:type="menu:HandledMenuItem" xmi:id="_cldRUKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.handledmenuitem.add" label="add"/>
           <children xsi:type="menu:MenuSeparator" xmi:id="_C-UCkKhPEeeRrI4sOl8pGw" elementId="com.novaimpact.project.menuseparator.0"/>
@@ -41,10 +41,10 @@
       </children>
     </trimBars>
   </children>
-  <handlers xmi:id="_6wlLfcgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.quitCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handlers.QuitHandler" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.openCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handlers.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.saveCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.aboutCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLfcgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.quitCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.QuitHandler" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.openCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.saveCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.aboutCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>

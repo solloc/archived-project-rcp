@@ -1,4 +1,4 @@
-package com.novaimpact.project.parts;
+package com.novaimpact.project.part;
 
 import java.util.Arrays;
 import java.util.List;

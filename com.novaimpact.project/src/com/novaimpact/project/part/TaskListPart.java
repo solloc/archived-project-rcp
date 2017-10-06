@@ -1,7 +1,6 @@
 
-package com.novaimpact.project.parts;
+package com.novaimpact.project.part;
 
-import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -10,7 +9,6 @@ import javax.inject.Inject;
 import org.eclipse.swt.widgets.Composite;
 
 import com.novaimpact.project.service.ISecondTaskService;
-import com.novaimpact.project.service.ITaskService;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.jface.viewers.ArrayContentProvider;
@@ -19,20 +17,13 @@ import org.eclipse.jface.viewers.TableViewer;
 public class TaskListPart {
 	private List<String> tableData;
 	
-//	@Inject
-//	private ITaskService taskService;
-	
 	@Inject
 	private ISecondTaskService secondTaskService;
 
 	@PostConstruct
 	public void postConstruct(Composite parent) {
 		
-		this.tableData = this.secondTaskService.getTasks();
-		
-//		this.tableData = Arrays.asList("abc","def","ghi","qwert","asdfg","yxcvb");
-//		this.tableData = this.taskService.getTasks();
-		
+		this.tableData = this.secondTaskService.getTasks();		
 		
 		parent.setLayout(new FillLayout(SWT.HORIZONTAL));
 		

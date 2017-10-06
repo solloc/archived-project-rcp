@@ -1,5 +1,5 @@
 
-package com.novaimpact.project.parts;
+package com.novaimpact.project.part;
 
 import javax.annotation.PostConstruct;
 import org.eclipse.swt.widgets.Composite;
