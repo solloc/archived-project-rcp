@@ -11,7 +11,7 @@
       <children xsi:type="basic:PartStack" xmi:id="_JZCfwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.partstack.main">
         <children xsi:type="basic:Part" xmi:id="_MBfvwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.part.task-list" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskListPart" label="Tasks" closeable="true">
           <toolbar xmi:id="_Z2-pIKrQEeejosGbL4munw" elementId="com.novaimpact.project.toolbar.TasksToolbar">
-            <children xsi:type="menu:HandledToolItem" xmi:id="_cmI-EKrQEeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.NewTask" label="new task" iconURI="platform:/plugin/com.novaimpact.project/icons/sample.png" command="_EzFoUKq_EeejosGbL4munw"/>
+            <children xsi:type="menu:HandledToolItem" xmi:id="_cmI-EKrQEeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.NewTask" label="new task" iconURI="platform:/plugin/com.novaimpact.project/icons/new_con.gif" tooltip="new task" command="_EzFoUKq_EeejosGbL4munw"/>
           </toolbar>
         </children>
         <children xsi:type="basic:Part" xmi:id="_E4LG4KwjEeeDbNislLg2Dw" elementId="com.novaimpact.project.part.incidentList" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.IncidentListPart" label="Incidents"/>
