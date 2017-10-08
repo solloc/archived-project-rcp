@@ -7,20 +7,14 @@
         <children xsi:type="basic:Part" xmi:id="_j-h2MKOkEee5C7KxQo_CQA" elementId="com.novaimpact.project.part.incident" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.IncidentPart" label="Incident"/>
       </children>
     </children>
-    <children xsi:type="basic:PartStack" xmi:id="_JZCfwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.partstack.main">
-      <children xsi:type="basic:Part" xmi:id="_MBfvwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.part.task-list" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskListPart" label="Tasks">
-        <menus xmi:id="_cBx8gKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.menu.menu-1" visible="false" label="menu-1">
-          <children xsi:type="menu:HandledMenuItem" xmi:id="_cldRUKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.handledmenuitem.add" label="add"/>
-          <children xsi:type="menu:MenuSeparator" xmi:id="_C-UCkKhPEeeRrI4sOl8pGw" elementId="com.novaimpact.project.menuseparator.0"/>
-          <children xsi:type="menu:DirectMenuItem" xmi:id="_EauWMKhPEeeRrI4sOl8pGw" elementId="com.novaimpact.project.directmenuitem.item-2" label="item-2"/>
-        </menus>
-        <menus xmi:id="_jN_rkKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.menu.view-menu" visible="false" label="menu-2">
-          <tags>ViewMenu</tags>
-          <children xsi:type="menu:HandledMenuItem" xmi:id="_mV8T8KhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.handledmenuitem.view-add" label="view add"/>
-        </menus>
-        <toolbar xmi:id="_lyxgAKhPEeeRrI4sOl8pGw" elementId="com.novaimpact.project.toolbar.task-tools">
-          <children xsi:type="menu:HandledToolItem" xmi:id="_YVUR0Kq_EeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.newTask" label="new task" command="_EzFoUKq_EeejosGbL4munw"/>
-        </toolbar>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_wYY8YKrXEeejosGbL4munw" elementId="com.novaimpact.project.partsashcontainer.main">
+      <children xsi:type="basic:PartStack" xmi:id="_JZCfwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.partstack.main">
+        <children xsi:type="basic:Part" xmi:id="_MBfvwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.part.task-list" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskListPart" label="Tasks" closeable="true">
+          <toolbar xmi:id="_Z2-pIKrQEeejosGbL4munw" elementId="com.novaimpact.project.toolbar.TasksToolbar">
+            <children xsi:type="menu:HandledToolItem" xmi:id="_cmI-EKrQEeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.NewTask" label="new task" iconURI="platform:/plugin/com.novaimpact.project/icons/sample.png" command="_EzFoUKq_EeejosGbL4munw"/>
+          </toolbar>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_E4LG4KwjEeeDbNislLg2Dw" elementId="com.novaimpact.project.part.incidentList" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.IncidentListPart" label="Incidents"/>
       </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">

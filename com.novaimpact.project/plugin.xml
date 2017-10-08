@@ -4,10 +4,15 @@
 
    <extension
          id="product"
+         name="product"
          point="org.eclipse.core.runtime.products">
       <product
             name="com.novaimpact.project"
             application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="project"
+               value="com.novaimpact.project">
+         </property>
          <property
                name="appName"
                value="com.novaimpact.project">
