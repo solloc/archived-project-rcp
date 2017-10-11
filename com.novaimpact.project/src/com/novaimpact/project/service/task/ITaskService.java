@@ -1,9 +1,12 @@
 package com.novaimpact.project.service.task;
 
-import java.util.List;
+import java.util.LinkedList;
 
+import com.novaimpact.project.model.Task;
+
+@Deprecated
 public interface ITaskService {
-	public List<String> getTasks();
+	public LinkedList<Task> getTasks();
 	
-	public String createTask(String name);
+	public Task createTask();
 }

@@ -12,25 +12,29 @@ import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService.PartState;
 
-import com.novaimpact.project.service.task.ITaskService;
+import com.novaimpact.project.model.Task;
+import com.novaimpact.project.service.task.TaskService;
 
 public class NewTaskHandler {
 	
 	@Inject
-	private ITaskService taskService;
+	private TaskService taskService;
 	
 	@Inject
 	private IEclipseContext context;
 	
 	@Execute
 	public void execute(EPartService partService, EModelService modelService) {
-		String task = this.taskService.createTask("new-task-1");
+//		String task = this.taskService.createTask("new-task-1");
+//		this.taskService = taskService;
+		Task task = this.taskService.createTask();
+		
 		MPartDescriptor partDescriptor = MBasicFactory.INSTANCE.createPartDescriptor();
 		partDescriptor.setContributionURI("bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskPart");
 		MPart part = modelService.createPart(partDescriptor);
 		part.setLabel("New Task");
 		part.setCloseable(true);
-		context.set("task-object", task);
+		context.set(Task.class.getName(), task);
 		partService.showPart(part, PartState.ACTIVATE);
 	}
 		
