@@ -30,9 +30,7 @@ public class NewTaskHandler {
 		MPart part = modelService.createPart(partDescriptor);
 		part.setLabel("New Task");
 		part.setCloseable(true);
-//		IEclipseContext context = part.getContext();
 		context.set("task-object", task);
-//		part.setObject(task);
 		partService.showPart(part, PartState.ACTIVATE);
 	}
 		
