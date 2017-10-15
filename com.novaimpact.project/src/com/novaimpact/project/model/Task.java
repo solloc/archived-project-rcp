@@ -2,10 +2,10 @@ package com.novaimpact.project.model;
 
 public class Task {
 	
-	public String id;
-	public String name;
-	public String creator;
-	public String description;
+	public String id = "";
+	public String name = "";
+	public String creator = "";
+	public String description = "";
 	
 	public Task(String id) {
 		this.id = id;

@@ -2,9 +2,7 @@
 package com.novaimpact.project.part;
 
 import javax.annotation.PostConstruct;
-import javax.inject.Inject;
 
-import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -20,13 +18,7 @@ public class TaskPart {
 	private Text textName;
 	private Text textDescription;
 	
-//	@Inject
-//	private EPartService partService;
-	
-	@Inject
-	private IEclipseContext context;
-
-
+	private Task newTask;
 
 	@PostConstruct
 	public void postConstruct(Composite parent) {
@@ -59,16 +51,13 @@ public class TaskPart {
 	}
 	
 	@Focus
-	@Inject
-	public void focus(Task task) {
-		
-//		Task task = (Task)this.context.get(Task.class.getName());
-		if (task.name != null && this.textName != null) {
-			this.textName.setText(task.name);
-		}		
-		if (task.id != null && this.textID != null) {
-			this.textID.setText(task.id);
-		}
-		
+	public void focus() {	
+	}
+	
+	public void setTask(Task task) {
+		this.newTask = task;
+		this.textID.setText(this.newTask.id);
+		this.textName.setText(this.newTask.name);
+		this.textDescription.setText(this.newTask.description);		
 	}
 }
