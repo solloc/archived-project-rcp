@@ -18,8 +18,6 @@ public class TaskService {
 //	@Inject
 	private IEclipseContext context;
 	
-//	protected LinkedList<String> tasks;
-	
 	@Inject
 	public TaskService(IEclipseContext context) {
 		this.context = context;
@@ -37,11 +35,6 @@ public class TaskService {
 		this.tasks.add(task2);
 		this.tasks.add(task3);
 		this.tasks.add(task4);
-		
-		
-		
-		
-//		this.tasks = new LinkedList<>(Arrays.asList("abc","def","ghi"));
 	}
 
 	public LinkedList<Task> getTasks() {

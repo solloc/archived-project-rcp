@@ -23,6 +23,7 @@ public class NewTaskHandler {
 	@Execute
 	public void execute(EPartService partService, EModelService modelService) {
 		Task task = this.taskService.createTask();
+		
 		task.name = "new-task-name";
 		
 		MPartDescriptor partDescriptor = MBasicFactory.INSTANCE.createPartDescriptor();

@@ -47,14 +47,17 @@ public class TaskListPart {
 			this.tableData = this.taskService.getTasks();	
 			this.tableViewer.setInput(this.tableData);
 //			this.tableViewer.getTable();
+			
 		}
 
 	}
 	
 	@Focus
 	public void focus() {
+//		this.tableViewer.refresh();
 //		this.tableViewer.setInput(this.taskService.getTasks());
 //		this.tableViewer.getTable();
 	}
+	
 	
 }

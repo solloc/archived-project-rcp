@@ -12,8 +12,13 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 import com.novaimpact.project.model.Task;
+import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.core.databinding.beans.PojoProperties;
 
 public class TaskPart {
+	private DataBindingContext m_bindingContext;
 	private Text textID;
 	private Text textName;
 	private Text textDescription;
@@ -47,6 +52,7 @@ public class TaskPart {
 		GridData gd_textDescription = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 		gd_textDescription.heightHint = 100;
 		textDescription.setLayoutData(gd_textDescription);
+		m_bindingContext = initDataBindings();
 		
 	}
 	
@@ -56,8 +62,19 @@ public class TaskPart {
 	
 	public void setTask(Task task) {
 		this.newTask = task;
+//		this.textID.
+//		this.textID.setText(this.newTask.id.getValue());
 		this.textID.setText(this.newTask.id);
 		this.textName.setText(this.newTask.name);
 		this.textDescription.setText(this.newTask.description);		
+	}
+	protected DataBindingContext initDataBindings() {
+		DataBindingContext bindingContext = new DataBindingContext();
+		//
+		IObservableValue observeTextTextNameObserveWidget = WidgetProperties.text(SWT.Modify).observe(textName);
+		IObservableValue nameNewTaskObserveValue = PojoProperties.value("name").observe(newTask);
+		bindingContext.bindValue(observeTextTextNameObserveWidget, nameNewTaskObserveValue, null, null);
+		//
+		return bindingContext;
 	}
 }

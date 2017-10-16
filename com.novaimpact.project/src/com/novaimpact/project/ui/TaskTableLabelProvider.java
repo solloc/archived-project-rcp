@@ -53,6 +53,7 @@ public class TaskTableLabelProvider implements ITableLabelProvider {
 //		default:
 //			break;
 //		}
+//		return task.id.getValue();
 		return task.id;
 	}
 
