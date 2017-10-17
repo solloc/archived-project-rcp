@@ -53,6 +53,7 @@ public class TaskPart {
 		gd_textDescription.heightHint = 100;
 		textDescription.setLayoutData(gd_textDescription);
 		m_bindingContext = initDataBindings();
+
 		
 	}
 	
@@ -62,18 +63,22 @@ public class TaskPart {
 	
 	public void setTask(Task task) {
 		this.newTask = task;
-//		this.textID.
-//		this.textID.setText(this.newTask.id.getValue());
-		this.textID.setText(this.newTask.id);
-		this.textName.setText(this.newTask.name);
-		this.textDescription.setText(this.newTask.description);		
+		m_bindingContext = initDataBindings();
 	}
 	protected DataBindingContext initDataBindings() {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
+		IObservableValue observeTextTextIDObserveWidget = WidgetProperties.text(SWT.Modify).observe(textID);
+		IObservableValue idNewTaskObserveValue = PojoProperties.value("id").observe(newTask);
+		bindingContext.bindValue(observeTextTextIDObserveWidget, idNewTaskObserveValue, null, null);
+		//
 		IObservableValue observeTextTextNameObserveWidget = WidgetProperties.text(SWT.Modify).observe(textName);
 		IObservableValue nameNewTaskObserveValue = PojoProperties.value("name").observe(newTask);
 		bindingContext.bindValue(observeTextTextNameObserveWidget, nameNewTaskObserveValue, null, null);
+		//
+		IObservableValue observeTextTextDescriptionObserveWidget = WidgetProperties.text(SWT.Modify).observe(textDescription);
+		IObservableValue descriptionNewTaskObserveValue = PojoProperties.value("description").observe(newTask);
+		bindingContext.bindValue(observeTextTextDescriptionObserveWidget, descriptionNewTaskObserveValue, null, null);
 		//
 		return bindingContext;
 	}

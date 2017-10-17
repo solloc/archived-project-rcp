@@ -24,7 +24,7 @@ public class NewTaskHandler {
 	public void execute(EPartService partService, EModelService modelService) {
 		Task task = this.taskService.createTask();
 		
-		task.name = "new-task-name";
+		task.setName("new-task-name");
 		
 		MPartDescriptor partDescriptor = MBasicFactory.INSTANCE.createPartDescriptor();
 		partDescriptor.setContributionURI("bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskPart");

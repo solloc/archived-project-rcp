@@ -54,7 +54,7 @@ public class TaskTableLabelProvider implements ITableLabelProvider {
 //			break;
 //		}
 //		return task.id.getValue();
-		return task.id;
+		return task.getId();
 	}
 
 }
