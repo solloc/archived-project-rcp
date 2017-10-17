@@ -23,41 +23,23 @@ public class TaskListPart {
 	private LinkedList<Task> tableData;
 	private TableViewer tableViewer;
 
-	@Inject
-	private TaskService taskService;
-
 	@PostConstruct
-	public void postConstruct(Composite parent) {
-		if (this.tableViewer == null) {
+	public void postConstruct(Composite parent, TaskService taskService) {
 			GridLayout gl_parent = new GridLayout(1, false);
 			parent.setLayout(gl_parent);
 			
 			this.tableViewer = new TableViewer(parent, SWT.BORDER | SWT.FULL_SELECTION);
-//			this.tableViewer.setContentProvider(ArrayContentProvider.getInstance());
 			this.tableViewer.setContentProvider(new TaskTableContentProvider());
 			this.tableViewer.setLabelProvider(new TaskTableLabelProvider());
 			
 			Table table = this.tableViewer.getTable();
 			table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-		}
 		
-		
-//		this.taskService = taskService;
-		if (this.taskService != null) {
-			this.tableData = this.taskService.getTasks();	
+			this.tableData = taskService.getTasks();
 			this.tableViewer.setInput(this.tableData);
-//			this.tableViewer.getTable();
-			
-		}
-
 	}
 	
 	@Focus
 	public void focus() {
-//		this.tableViewer.refresh();
-//		this.tableViewer.setInput(this.taskService.getTasks());
-//		this.tableViewer.getTable();
 	}
-	
-	
 }

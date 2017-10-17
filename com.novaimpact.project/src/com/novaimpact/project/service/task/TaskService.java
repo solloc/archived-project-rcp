@@ -15,14 +15,9 @@ public class TaskService {
 	
 	private LinkedList<Task> tasks;
 	
-//	@Inject
-	private IEclipseContext context;
-	
 	@Inject
 	public TaskService(IEclipseContext context) {
-		this.context = context;
-		
-		this.context.set(TaskService.class.getName(), this);
+		context.set(TaskService.class.getName(), this);
 		
 		this.tasks = new LinkedList<Task>();
 		
