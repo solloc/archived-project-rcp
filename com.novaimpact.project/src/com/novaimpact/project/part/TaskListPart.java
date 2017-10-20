@@ -4,7 +4,6 @@ package com.novaimpact.project.part;
 import java.util.LinkedList;
 
 import javax.annotation.PostConstruct;
-import javax.inject.Inject;
 
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.jface.viewers.TableViewer;

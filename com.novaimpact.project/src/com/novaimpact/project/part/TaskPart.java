@@ -18,7 +18,7 @@ import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.core.databinding.beans.PojoProperties;
 
 public class TaskPart {
-	private DataBindingContext m_bindingContext;
+//	private DataBindingContext m_bindingContext;
 	private Text textID;
 	private Text textName;
 	private Text textDescription;
@@ -52,7 +52,7 @@ public class TaskPart {
 		GridData gd_textDescription = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 		gd_textDescription.heightHint = 100;
 		textDescription.setLayoutData(gd_textDescription);
-		m_bindingContext = initDataBindings();
+//		m_bindingContext = initDataBindings();
 
 		
 	}
@@ -63,8 +63,10 @@ public class TaskPart {
 	
 	public void setTask(Task task) {
 		this.newTask = task;
-		m_bindingContext = initDataBindings();
+//		m_bindingContext = initDataBindings();
+		initDataBindings();
 	}
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	protected DataBindingContext initDataBindings() {
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
