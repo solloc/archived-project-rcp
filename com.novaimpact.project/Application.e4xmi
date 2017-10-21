@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.window.main" label="project">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.window.main" label="project" iconURI="platform:/plugin/com.novaimpact.project/icons/flask.png">
     <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.partsashcontainer.sample" visible="false">
       <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.partstack.sample">
         <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.part.sample" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.SamplePart" label="Sample Part"/>
@@ -9,9 +9,9 @@
     </children>
     <children xsi:type="basic:PartSashContainer" xmi:id="_wYY8YKrXEeejosGbL4munw" elementId="com.novaimpact.project.partsashcontainer.main">
       <children xsi:type="basic:PartStack" xmi:id="_JZCfwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.partstack.main">
-        <children xsi:type="basic:Part" xmi:id="_MBfvwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.part.task-list" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskListPart" label="Tasks" closeable="true">
+        <children xsi:type="basic:Part" xmi:id="_MBfvwKhOEeeRrI4sOl8pGw" elementId="com.novaimpact.project.part.task-list" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.TaskListPart" label="Tasks" iconURI="platform:/plugin/com.novaimpact.project/icons/task/task.png" closeable="true">
           <toolbar xmi:id="_Z2-pIKrQEeejosGbL4munw" elementId="com.novaimpact.project.toolbar.TasksToolbar">
-            <children xsi:type="menu:HandledToolItem" xmi:id="_cmI-EKrQEeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.NewTask" label="new task" iconURI="platform:/plugin/com.novaimpact.project/icons/final_icon.gif" tooltip="new task" command="_EzFoUKq_EeejosGbL4munw"/>
+            <children xsi:type="menu:HandledToolItem" xmi:id="_cmI-EKrQEeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.NewTask" label="new task" iconURI="platform:/plugin/com.novaimpact.project/icons/task/task--plus.png" tooltip="new task" command="_EzFoUKq_EeejosGbL4munw"/>
           </toolbar>
         </children>
         <children xsi:type="basic:Part" xmi:id="_E4LG4KwjEeeDbNislLg2Dw" elementId="com.novaimpact.project.part.incidentList" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.IncidentListPart" label="Incidents"/>
@@ -29,7 +29,7 @@
     </mainMenu>
     <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.trimbar.top">
       <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handleditem.trimbar.top.open" iconURI="platform:/plugin/com.novaimpact.project/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handleditem.trimbar.top.open" iconURI="platform:/plugin/com.novaimpact.project/icons/folder-horizontal-open.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
         <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handleditem.trimbar.top.save" iconURI="platform:/plugin/com.novaimpact.project/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
       </children>
     </trimBars>
