@@ -1,6 +1,6 @@
 package com.novaimpact.project.model;
 
-public class Task {
+public class Task extends ModelObject {
 	
 	private String id = "";
 	private String name = "";
@@ -23,7 +23,8 @@ public class Task {
 	}
 
 	public void setName(String name) {
-		this.name = name;
+//		this.name = name;
+		firePropertyChange("name", this.name, this.name = name);
 	}
 
 	public String getId() {
@@ -31,7 +32,8 @@ public class Task {
 	}
 
 	public void setId(String id) {
-		this.id = id;
+//		this.id = id;
+		firePropertyChange("id", this.id, this.id = id);
 	}
 
 	public String getCreator() {
@@ -39,7 +41,8 @@ public class Task {
 	}
 
 	public void setCreator(String creator) {
-		this.creator = creator;
+//		this.creator = creator;
+		firePropertyChange("creator", this.creator, this.creator = creator);
 	}
 
 	public String getDescription() {
@@ -47,7 +50,8 @@ public class Task {
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+//		this.description = description;
+		firePropertyChange("description", this.description, this.description = description);
 	}
 	
 }

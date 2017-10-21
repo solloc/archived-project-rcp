@@ -42,19 +42,20 @@ public class TaskTableLabelProvider implements ITableLabelProvider {
 	public String getColumnText(Object element, int columnIndex) {
 		
 		Task task = (Task)element;
+		String text = "";
 		
-//		switch (columnIndex) {
-//		case 0:
-//			return task.id;
-//		case 1:
-//			return task.name;
-//		case 2:
-//			return task.creator;
-//		default:
-//			break;
-//		}
-//		return task.id.getValue();
-		return task.getId();
+		switch (columnIndex) {
+		case 0:
+			text = task.getId();
+			break;
+		case 1:
+			text = task.getName();
+			break;
+		default:
+			break;
+		}
+		
+		return text;
 	}
 
 }
