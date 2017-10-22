@@ -4,7 +4,6 @@ package com.novaimpact.project.part;
 import javax.annotation.PostConstruct;
 
 import org.eclipse.core.databinding.beans.BeanProperties;
-import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.viewers.TableViewer;
@@ -40,10 +39,8 @@ public class TaskListPart {
 			TableColumn tblclmnName = new TableColumn(table, SWT.NONE);
 			tblclmnName.setWidth(100);
 			tblclmnName.setText("name");
-
-			IObservableList<Task> input = taskService.getTasks();
 			
-			ViewerSupport.bind(this.tableViewer, input, BeanProperties.values(Task.class, new String[] {"id","name"}));
+			ViewerSupport.bind(this.tableViewer, taskService.getTasks(), BeanProperties.values(Task.class, new String[] {"id","name"}));
 	}
 	
 	@Focus
