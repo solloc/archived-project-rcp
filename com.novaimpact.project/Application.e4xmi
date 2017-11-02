@@ -38,6 +38,7 @@
   <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.saveCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.handler.aboutCommand" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_LYgdIKq_EeejosGbL4munw" elementId="com.novaimpact.project.handler.newTask" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.NewTaskHandler" command="_EzFoUKq_EeejosGbL4munw"/>
+  <handlers xmi:id="_m6bjUMADEeegp7dg9AYLeQ" elementId="com.novaimpact.project.handler.openTaskHandler" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.handler.OpenTaskHandler" command="_cY9IoMADEeegp7dg9AYLeQ"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="com.novaimpact.project.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -54,6 +55,9 @@
   <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
   <commands xmi:id="_EzFoUKq_EeejosGbL4munw" elementId="com.novaimpact.project.command.newTask" commandName="newTaskCommand"/>
+  <commands xmi:id="_cY9IoMADEeegp7dg9AYLeQ" elementId="com.novaimpact.project.command.opentaskcommand" commandName="openTaskCommand" description="open task">
+    <parameters xmi:id="_f2bVEMADEeegp7dg9AYLeQ" elementId="com.novaimpact.project.commandparameter.taskid" name="taskid"/>
+  </commands>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
