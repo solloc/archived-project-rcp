@@ -14,7 +14,6 @@
             <children xsi:type="menu:HandledToolItem" xmi:id="_cmI-EKrQEeejosGbL4munw" elementId="com.novaimpact.project.handledtoolitem.NewTask" label="new task" iconURI="platform:/plugin/com.novaimpact.project/icons/task/task--plus.png" tooltip="new task" command="_EzFoUKq_EeejosGbL4munw"/>
           </toolbar>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_E4LG4KwjEeeDbNislLg2Dw" elementId="com.novaimpact.project.part.incidentList" contributionURI="bundleclass://com.novaimpact.project/com.novaimpact.project.part.IncidentListPart" label="Incidents"/>
       </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
