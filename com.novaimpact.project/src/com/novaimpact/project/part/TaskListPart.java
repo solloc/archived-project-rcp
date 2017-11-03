@@ -7,12 +7,7 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 
 import org.eclipse.core.commands.Command;
-import org.eclipse.core.commands.ExecutionEvent;
-import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.commands.NotEnabledException;
-import org.eclipse.core.commands.NotHandledException;
 import org.eclipse.core.commands.ParameterizedCommand;
-import org.eclipse.core.commands.common.NotDefinedException;
 import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.e4.core.commands.ECommandService;
 import org.eclipse.e4.core.commands.EHandlerService;
@@ -20,6 +15,7 @@ import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -31,6 +27,7 @@ import org.eclipse.swt.widgets.TableColumn;
 import com.novaimpact.project.model.Task;
 import com.novaimpact.project.service.task.TaskService;
 
+@SuppressWarnings("restriction")
 public class TaskListPart {
 	private TableViewer tableViewer;
 
@@ -58,27 +55,19 @@ public class TaskListPart {
 				
 				@Override
 				public void doubleClick(DoubleClickEvent event) {
-					// TODO Auto-generated method stub
 					System.out.println(event.getSelection());
+					
+					StructuredSelection selection = (StructuredSelection)event.getSelection();
+					Task selectedTask = (Task)selection.getFirstElement();
+					
 					Map<String, Object> parameter = new HashMap<>();
 
-					parameter.put("com.novaimpact.project.commandparameter.taskid", "abc");
-//					parameter.put("task", event.getSelection());
-					
-					
-					
+					parameter.put("com.novaimpact.project.commandparameter.taskid", selectedTask.getId());
+		
 					Command command = commandService.getCommand("com.novaimpact.project.command.opentaskcommand");
 					ParameterizedCommand pcmd = ParameterizedCommand.generateCommand(command, parameter);
-					ExecutionEvent event2 = new ExecutionEvent(command, parameter, null, null);
 					
-					handlerService.executeHandler(pcmd);
-					
-//					try {
-//						command.executeWithChecks(event2);
-//					} catch (ExecutionException | NotDefinedException | NotEnabledException | NotHandledException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}					
+					handlerService.executeHandler(pcmd);				
 				}
 			});
 			

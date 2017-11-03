@@ -1,5 +1,6 @@
 package com.novaimpact.project.service.task;
 
+import java.util.Iterator;
 import java.util.UUID;
 
 import javax.inject.Inject;
@@ -52,6 +53,19 @@ public class TaskService {
 		Task task = new Task(UUID.randomUUID().toString());
 		this.tasks.add(task);
 		return task;
+	}
+	
+	public Task getTask(String id) {
+		Iterator<Task> iterator = this.tasks.iterator();
+		
+		while (iterator.hasNext()) {
+			Task currentTask = iterator.next();
+			if (currentTask.getId().equals(id)) {
+				return currentTask;				
+			}
+		}
+		
+		return null;
 	}
 
 }
